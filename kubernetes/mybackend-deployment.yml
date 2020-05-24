@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+    name: my-mybackend-deployment
+    labels:
+        app: my-mybackend
+        type: backend
+
+spec:
+    template:
+        metadata:
+            name: mybackend-pod
+            labels:
+                    app: my-mybackend
+                    type: backend
+        spec:
+            containers:
+                - name: my-backend-container
+                  image: artgoleb/mybackend
+
+    replicas: 3
+    selector:
+        matchLabels:
+            app: my-mybackend
+            type: backend
