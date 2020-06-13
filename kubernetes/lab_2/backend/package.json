@@ -1,0 +1,10 @@
+{
+    "dependencies": {
+        "express": "*",
+        "redis": "^3.0.2",
+        "uuid": "^8.1.0"
+    },
+    "scripts": {
+        "start": "node index.js"
+    }
+}
