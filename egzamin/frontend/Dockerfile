@@ -1,11 +1,9 @@
-FROM node:alpine
-
+FROM node:alpine AS build
 WORKDIR /opt/app
-
-COPY ./package.json .
-
-RUN yarn install
-
+COPY package.json .
+RUN npm install
 COPY . .
+RUN npm run-script build
 
-CMD ["yarn", "start"]
+FROM nginx
+COPY --from=build /opt/app/build /usr/share/nginx/html
