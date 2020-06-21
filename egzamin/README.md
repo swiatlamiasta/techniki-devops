@@ -1,22 +1,22 @@
 # To start:
 
-kubectl apply -f k8s/app-configmap.yml
+kubectl apply -f app-configmap.yml
 
-kubectl apply -f k8s/postgres-secret.yml
-kubectl apply -f k8s/postgres-pvc.yml
-kubectl apply -f k8s/postgres-deployment.yml
-kubectl apply -f k8s/postgres-service-clusterip.yml
+kubectl apply -f postgres-secret.yml
+kubectl apply -f postgres-pvc.yml
+kubectl apply -f postgres-deployment.yml
+kubectl apply -f postgres-service-clusterip.yml
 
-kubectl apply -f k8s/redis-deployment.yml
-kubectl apply -f k8s/redis-service-clusterip.yml
+kubectl apply -f redis-deployment.yml
+kubectl apply -f redis-service-clusterip.yml
 
-kubectl apply -f k8s/backend-deployment.yml
-kubectl apply -f k8s/backend-service-clusterip.yml
+kubectl apply -f backend-deployment.yml
+kubectl apply -f backend-service-clusterip.yml
 
-kubectl apply -f k8s/frontend-deployment.yml
-kubectl apply -f k8s/frontend-service-clusterip.yml
+kubectl apply -f frontend-deployment.yml
+kubectl apply -f frontend-service-clusterip.yml
 
-kubectl apply -f k8s/ingress-service.yml
+kubectl apply -f ingress-service.yml
 
 # To delete:
 
