@@ -14,13 +14,14 @@ const client = redis.createClient({
     port: 6379
 });
 console.log(keys);
+
 const pgClient = new Pool({
-    user: keys.pgUser,
     host: keys.pgHost,
-    database: keys.pgDatabase,
+    port: keys.pgPort,
+    user: keys.pgUser,
     password: keys.pgPassword,
-    port: keys.pgPort
-});
+    database: keys.pgDatabase
+  });
 
 pgClient.on('error', () => console.log('Lost PG conn'));
 
